@@ -183,7 +183,7 @@ def execute_purchase(message):
     balance = res[0] if res else 0.0
 
     if balance < p_price:
-        bot.send_message(message.chat.id, f"❌ **رصيدك غير كافٍ!**\nرصيدك الحالي: {balance}$ \vert{} سعر المنتج: {p_price}$\nيرجى شحن محفظتك أولاً.")
+        bot.send_message(message.chat.id, f"❌ رصيدك غير كافٍ!\nرصيدك الحالي: {balance} | سعر المنتج: {p_price}\nيرجى شحن محفظتك أولاً.")
         del user_state[user_id]
         return
 
